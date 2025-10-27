@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud 9 Detailing - Premier Auto Detailing in Meridian, ID</title>
+    <meta name="description" content="Professional auto detailing services in Meridian, Idaho. Interior and exterior detailing, ceramic coating, and mobile services by Harper Brown.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @keyframes slider1 {0%{opacity:1;}50%{opacity:1;}60%{opacity:0;}100%{opacity:0;}}
+        @keyframes slider2 {0%{opacity:0;}50%{opacity:0;}60%{opacity:1;}100%{opacity:1;}}
+        .fade-1{animation:slider1 10s infinite;}
+        .fade-2{animation:slider2 10s infinite;}
+        .parallax-bg {
+            background-image: url('https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2022/08/Porsche-911-GT3-RS-Rear-Quarter-View.jpeg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .hero-parallax {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://axleaddict.com/.image/t_share/MTk5NDI5MTk3ODU1MjA1MzI2/shutterstock_2287564617.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .overlay {background-color: rgba(0, 0, 0, 0.5);}
+        
+        /* Mobile parallax fix */
+        @media (max-width: 768px) {
+            .parallax-bg, .hero-parallax {
+                background-attachment: scroll;
+            }
+        }
+        
+        /* Ensure mobile responsiveness */
+        @media (max-width: 640px) {
+            .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            .grid {
+                gap: 1rem;
+            }
+            
+            .text-4xl {
+                font-size: 2rem;
+            }
+            
+            .text-5xl {
+                font-size: 2.5rem;
+            }
+            
+            .h-screen {
+                height: 50vh;
+            }
+        }
+    </style>
+</head>
+<body class="bg-black text-white min-h-screen flex flex-col">
+
+  <!-- Professional Centered Header -->
+  <header class="bg-black border-b border-gray-800 sticky top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4 py-5 md:py-7 lg:py-8">
+      <div class="flex items-center justify-between relative">
+        <!-- Menu Button (Left) -->
+        <button class="text-white p-3 hover:bg-gray-800 rounded-lg transition-all duration-200 group flex items-center space-x-2" id="mobile-menu-button">
+          <div class="flex flex-col space-y-1.5">
+            <span class="block w-6 h-0.5 bg-white transition-all duration-300 group-hover:w-7"></span>
+            <span class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+            <span class="block w-6 h-0.5 bg-white transition-all duration-300 group-hover:w-7"></span>
+          </div>
+          <span class="hidden md:inline text-sm font-medium">Menu</span>
+        </button>
+
+        <!-- Centered Logo -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 flex items-center">
+          <a href="#home" class="block">
+            <img src="https://us1-photo.nextdoor.com/business_logo/3f/1f/3f1f856ada6f0fa86479ddac5b7cc230.jpeg?request_version=v2&output_type=jpeg&sizing=linear&x_size=1&resize_type=resize&density=2" alt="Cloud 9 Detailing Logo" class="h-16 md:h-20 lg:h-24 w-auto transition-all duration-300" id="logo-img" />
+          </a>
+        </div>
+
+        <!-- CTA Button (Right) -->
+        <div class="flex items-center space-x-3">
+          <a href="tel:2088009511" class="hidden lg:flex items-center text-white hover:text-gray-300 transition-colors mr-2">
+            <i class="fa fa-phone mr-2"></i>
+            <span class="text-sm">(208) 800-9511</span>
+          </a>
+          <a href="#contact" class="bg-white text-black font-bold py-2 px-4 md:py-3 md:px-8 rounded-full hover:bg-gray-200 transition-all duration-300 text-sm md:text-base shadow-lg hover:shadow-xl">
+            Schedule Service
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enhanced Mobile/Desktop Menu -->
+    <div class="bg-gray-900 border-t border-gray-800 hidden transition-all duration-300 ease-in-out" id="mobile-menu" style="max-height: 0;">
+      <div class="container mx-auto px-4 py-6">
+        <nav class="flex flex-col space-y-2">
+          <a href="#services" class="text-white text-lg font-medium hover:bg-gray-800 transition-all duration-200 py-3 px-4 rounded-lg flex items-center group">
+            <i class="fa fa-car mr-4 text-gray-400 group-hover:text-white transition-colors w-6"></i>
+            <span>Services</span>
+            <i class="fa fa-chevron-right ml-auto text-gray-600 group-hover:text-white transition-all group-hover:translate-x-1"></i>
+          </a>
+          <a href="#about" class="text-white text-lg font-medium hover:bg-gray-800 transition-all duration-200 py-3 px-4 rounded-lg flex items-center group">
+            <i class="fa fa-info-circle mr-4 text-gray-400 group-hover:text-white transition-colors w-6"></i>
+            <span>About</span>
+            <i class="fa fa-chevron-right ml-auto text-gray-600 group-hover:text-white transition-all group-hover:translate-x-1"></i>
+          </a>
+          <a href="#gallery" class="text-white text-lg font-medium hover:bg-gray-800 transition-all duration-200 py-3 px-4 rounded-lg flex items-center group">
+            <i class="fa fa-images mr-4 text-gray-400 group-hover:text-white transition-colors w-6"></i>
+            <span>Gallery</span>
+            <i class="fa fa-chevron-right ml-auto text-gray-600 group-hover:text-white transition-all group-hover:translate-x-1"></i>
+          </a>
+          <a href="#testimonials" class="text-white text-lg font-medium hover:bg-gray-800 transition-all duration-200 py-3 px-4 rounded-lg flex items-center group">
+            <i class="fa fa-star mr-4 text-gray-400 group-hover:text-white transition-colors w-6"></i>
+            <span>Reviews</span>
+            <i class="fa fa-chevron-right ml-auto text-gray-600 group-hover:text-white transition-all group-hover:translate-x-1"></i>
+          </a>
+          <a href="#contact" class="text-white text-lg font-medium hover:bg-gray-800 transition-all duration-200 py-3 px-4 rounded-lg flex items-center group">
+            <i class="fa fa-envelope mr-4 text-gray-400 group-hover:text-white transition-colors w-6"></i>
+            <span>Contact</span>
+            <i class="fa fa-chevron-right ml-auto text-gray-600 group-hover:text-white transition-all group-hover:translate-x-1"></i>
+          </a>
+          
+          <!-- Contact Info in Menu -->
+          <div class="pt-4 mt-4 border-t border-gray-700 space-y-3">
+            <a href="tel:2088009511" class="flex items-center text-gray-300 hover:text-white hover:bg-gray-800 transition-all duration-200 py-2 px-4 rounded-lg">
+              <i class="fa fa-phone mr-4 text-gray-400 w-6"></i>
+              <span>(208) 800-9511</span>
+            </a>
+            <a href="mailto:harperbrown5556@gmail.com" class="flex items-center text-gray-300 hover:text-white hover:bg-gray-800 transition-all duration-200 py-2 px-4 rounded-lg">
+              <i class="fa fa-envelope mr-4 text-gray-400 w-6"></i>
+              <span class="text-sm">harperbrown5556@gmail.com</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Full-screen hero section -->
+  <section id="home" class="hero-parallax relative w-full h-screen overflow-hidden">
+      <!-- Parallax background with dark overlay -->
+      <div class="absolute inset-0">
+      </div>
+
+      <!-- Foreground content -->
+      <div class="relative z-10 flex items-center justify-start h-full">
+        <div class="m-4 md:m-8 max-w-xl">
+          <h1 class="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6">A Shine That Leaves You On Cloud 9</h1>
+          <p class="text-lg md:text-xl text-white mb-4">
+            Cloud 9 Detailing brings professional auto detailing services to your doorstep in Meridian, Idaho. Complete interior and exterior detailing, ceramic coating, and mobile services delivered to your driveway.
+          </p>
+          <button class="mt-4 px-5 py-3 bg-white text-gray-800 font-bold rounded" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+            Book Now
+          </button>
+        </div>
+      </div>
+  </section>
+
+  <!-- First Gallery Section (Single Image + Text) -->
+  <section id="about" class="bg-black py-12">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+      <!-- Left (Image) -->
+      <div class="w-full md:w-1/2 mb-8 md:mb-0">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80"
+             alt="Car Detailing Service" class="rounded-lg shadow-lg w-full max-w-md mx-auto object-cover"/>
+      </div>
+      <!-- Right (Text + Button) -->
+      <div class="w-full md:w-1/2 md:ml-8 text-center md:text-left">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">What We Do</h2>
+        <p class="text-gray-300 leading-relaxed mb-6">
+          From interior deep cleaning to exterior ceramic coating, our mobile crew transforms every vehicle with meticulous attention to detail. We come to you, so you can relax while we make your car look like new.
+        </p>
+        <p class="text-gray-300 leading-relaxed mb-6">
+          Founded by Harper Brown, Cloud 9 Detailing has built a reputation for professionalism, punctuality, and exceptional results throughout the Meridian area.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nature Gallery (Title + Circular Mosaic) -->
+  <section id="gallery" class="bg-black py-12">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8">
+      <!-- LEFT SIDE: Text -->
+      <div class="md:w-1/2 text-center md:text-left">
+        <h2 class="text-3xl font-bold mb-4">Our Work</h2>
+        <p class="text-gray-300 leading-relaxed">
+          From everyday drivers to the most luxurious cars we do it all leaving you on cloud nine and your car in tip top condition.
+        </p>
+      </div>
+      <!-- RIGHT SIDE: Circular Mosaic -->
+      <!-- (unchanged markup / images) -->
+      <div class="flex justify-center w-full md:w-auto">
+        <div class="relative w-[300px] h-[300px] md:w-[600px] md:h-[600px] rounded-full overflow-hidden shadow-lg">
+          <div class="grid grid-rows-4 grid-cols-4 gap-1 w-full h-full">
+            <!-- images kept exactly as in original -->
+            <div class="row-span-2 col-span-2 relative"><img src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?auto=format&fit=crop&q=80" alt="" class="object-cover w-full h-full"></div>
+            <div class="row-start-1 row-span-1 col-start-3 col-span-2 relative"><img src="https://ieabp.com/wp-content/uploads/2020/07/CarDet-scaled-e1594405848203-1980x990.jpg" alt="" class="object-cover w-full h-full"></div>
+            <div class="row-start-2 col-start-3 relative"><img src="https://th.bing.com/th/id/R.e8ace848f2250753ff3b3bbfebc358fc?rik=1ahDvxFN8EFZ2Q&riu=http%3a%2f%2fwordpress.rpowershower.com%2fwp-content%2fuploads%2f2015%2f05%2fauto-detailing-experts-1.jpg&ehk=Zp6erYm0eu%2fKJlnCZ4BbrM3YUP%2fPY8aCk9MYXKolf%2f0%3d&risl=&pid=ImgRaw&r=0&adlt=strict" alt="" class="object-cover w-full h-full"></div>
+            <div class="row-start-2 col-start-4 relative"><img src="https://th.bing.com/th/id/OIP.mN5Tnc3Oo195o8TDGLvslwAAAA?rs=1&pid=ImgDetMain&adlt=strict" alt="" class="object-cover w-full h-full"></div>
+            <div class="row-start-3 col-start-1 relative"><img src="https://images.ctfassets.net/uwf0n1j71a7j/6ihnLVbvnXPpEzduw0cvZH/81e1f68af3a77c000cf19c777324cd8c/car-detailing-guide.png" alt="" class="object-cover w-full h-full"></div>
+            <div class="row-start-3 col-start-2 relative"><img src="https://cdn.luxe.digital/media/2021/04/10100621/best-luxury-car-brand-bugatti-luxe-digital%402x.jpg" alt="" class="object-cover w-full h-full"></div>
+            <div class="row-start-3 col-start-3 relative"><img src="https://www.techicy.com/wp-content/uploads/2019/08/auto-detailing-5.jpg" alt="" class="object-cover w-full h-full"></div>
+            <div class="row-start-3 col-start-4 relative"><img src="https://dynamicdetailingchicago.com/wp-content/uploads/2022/01/2-Auto-Detailing-Interior-Detailing-Packages-A.jpg" alt="" class="object-cover w-full h-full"></div>
+            <div class="row-start-4 col-start-1 relative"><img src="https://www.garn.org/wp-content/uploads/2020/10/1-1.jpg" alt="" class="object-cover w-full h-full"></div>
+            <div class="row-start-4 col-start-2 relative"><img src="https://i.pinimg.com/originals/c2/fe/dc/c2fedcef65f8ceb8cf4937c6407e6792.jpg" alt="" class="object-cover w-full h-full"></div>
+            <div class="row-start-4 col-start-3 relative"><img src="https://th.bing.com/th/id/R.9f44bb906b28c7fc32e94ba5d90a98fd?rik=bMOB2jh%2brKQTRA&riu=http%3a%2f%2fwallpapercave.com%2fwp%2f7DsFs1j.jpg&ehk=dIlh%2fLO3mHKnyyj7tfdoExjhmaV9XP4bbOdmrMGLems%3d&risl=&pid=ImgRaw&r=0" alt="" class="object-cover w-full h-full"></div>
+            <div class="row-start-4 col-start-4 relative"><img src="https://cdn.wallpapersafari.com/72/82/uxKF3l.jpg" alt="" class="object-cover w-full h-full"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="bg-white">
+    <div class="w-full">
+        <div class="bg-black py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-white text-center">Our Services</h2>
+                <p class="mt-4 text-lg text-gray-300 text-center">Comprehensive mobile detailing care for every vehicle.</p>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3">
+            <!-- Service 1 -->
+            <a href="#contact" class="block transform transition duration-500 hover:-translate-y-2 hover:shadow-lg">
+                <div class="bg-white overflow-hidden">
+                    <img class="w-full h-48 object-cover" src="https://th.bing.com/th/id/R.a24cf437b4a65a39180daa37087a3d94?rik=Mj8tBwexW%2fux7w&pid=ImgRaw&r=0" alt="Interior Detailing">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800">Interior Detailing</h3>
+                        <p class="mt-3 text-gray-600">Deep cleaning, vacuuming, shampooing, and leather conditioning for a fresh interior.</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Service 2 -->
+            <a href="#contact" class="block transform transition duration-500 hover:-translate-y-2 hover:shadow-lg">
+                <div class="bg-white overflow-hidden">
+                    <img class="w-full h-48 object-cover" src="https://www.owensautodetailing.com/wp-content/uploads/2022/04/Owens-Auto-Detailing-Exterior-Car-Detailing.jpg" alt="Exterior Detailing">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800">Exterior Detailing</h3>
+                        <p class="mt-3 text-gray-600">Hand wash, clay bar treatment, waxing, and polishing to restore your vehicle's shine.</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Service 3 -->
+            <a href="#contact" class="block transform transition duration-500 hover:-translate-y-2 hover:shadow-lg">
+                <div class="bg-white overflow-hidden">
+                    <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80" alt="Guaranteed Clean Car">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800">Guaranteed Clean Car</h3>
+                        <p class="mt-3 text-gray-600">If you don't love it, we will keep cleaning for free until you're completely satisfied.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="bg-black py-20">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-5xl font-bold text-white mb-4">What Our Customers Say</h2>
+        <p class="text-xl text-gray-300">Real reviews from satisfied customers in Meridian, Idaho</p>
+      </div>
+
+      <!-- Testimonials Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+          <div class="flex items-center mb-4">
+            <div class="flex text-yellow-400 text-xl">
+              ★★★★★
+            </div>
+          </div>
+          <blockquote class="text-gray-700 text-lg mb-6 leading-relaxed">
+            "Harper detailed my Toyota Highlander at my home and it looks (and smells) amazing! Harper was very easy to work with as it relates to scheduling and price. He was punctual and polite - I highly recommend!"
+          </blockquote>
+          <div class="flex items-center">
+            <img
+              class="h-16 w-16 rounded-full object-cover"
+              src="https://randomuser.me/api/portraits/women/32.jpg"
+              alt="Sarah M."
+            >
+            <div class="ml-4">
+              <div class="text-black font-bold text-lg">Sarah M.</div>
+              <div class="text-gray-600">Meridian, ID</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+          <div class="flex items-center mb-4">
+            <div class="flex text-yellow-400 text-xl">
+              ★★★★★
+            </div>
+          </div>
+          <blockquote class="text-gray-700 text-lg mb-6 leading-relaxed">
+            "Had Harper detail my Hyundai Venue, he went above and beyond! Such a hardworking young man that does excellent work! 10/10 would recommend!!!"
+          </blockquote>
+          <div class="flex items-center">
+            <img
+              class="h-16 w-16 rounded-full object-cover"
+              src="https://randomuser.me/api/portraits/men/65.jpg"
+              alt="Mike R."
+            >
+            <div class="ml-4">
+              <div class="text-black font-bold text-lg">Mike R.</div>
+              <div class="text-gray-600">Meridian, ID</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+          <div class="flex items-center mb-4">
+            <div class="flex text-yellow-400 text-xl">
+              ★★★★★
+            </div>
+          </div>
+          <blockquote class="text-gray-700 text-lg mb-6 leading-relaxed">
+            "Professional service with amazing results. Harper's attention to detail is outstanding. My car looks better than when I first bought it!"
+          </blockquote>
+          <div class="flex items-center">
+            <img
+              class="h-16 w-16 rounded-full object-cover"
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt="Jennifer L."
+            >
+            <div class="ml-4">
+              <div class="text-black font-bold text-lg">Jennifer L.</div>
+              <div class="text-gray-600">Meridian, ID</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+          <div class="flex items-center mb-4">
+            <div class="flex text-yellow-400 text-xl">
+              ★★★★★
+            </div>
+          </div>
+          <blockquote class="text-gray-700 text-lg mb-6 leading-relaxed">
+            "Cloud 9 Detailing was professional and thorough. My car has never looked better, it looks amazing!"
+          </blockquote>
+          <div class="flex items-center">
+            <img
+              class="h-16 w-16 rounded-full object-cover"
+              src="https://randomuser.me/api/portraits/men/55.jpg"
+              alt="Michael Thompson"
+            >
+            <div class="ml-4">
+              <div class="text-black font-bold text-lg">Michael Thompson</div>
+              <div class="text-gray-600">Meridian, ID</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 5 -->
+        <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+          <div class="flex items-center mb-4">
+            <div class="flex text-yellow-400 text-xl">
+              ★★★★★
+            </div>
+          </div>
+          <blockquote class="text-gray-700 text-lg mb-6 leading-relaxed">
+            "Exceptional service! Cloud 9 Detailing made my vehicle sparkle like never before. Harper's mobile service is incredibly convenient."
+          </blockquote>
+          <div class="flex items-center">
+            <img
+              class="h-16 w-16 rounded-full object-cover"
+              src="https://randomuser.me/api/portraits/women/68.jpg"
+              alt="Laura Smith"
+            >
+            <div class="ml-4">
+              <div class="text-black font-bold text-lg">Laura Smith</div>
+              <div class="text-gray-600">Meridian, ID</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 6 -->
+        <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+          <div class="flex items-center mb-4">
+            <div class="flex text-yellow-400 text-xl">
+              ★★★★★
+            </div>
+          </div>
+          <blockquote class="text-gray-700 text-lg mb-6 leading-relaxed">
+            "The team showed up on time and worked quickly. I can't believe how clean my car is now!"
+          </blockquote>
+          <div class="flex items-center">
+            <img
+              class="h-16 w-16 rounded-full object-cover"
+              src="https://randomuser.me/api/portraits/men/75.jpg"
+              alt="Mark Wilson"
+            >
+            <div class="ml-4">
+              <div class="text-black font-bold text-lg">Mark Wilson</div>
+              <div class="text-gray-600">Meridian, ID</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Section -->
+      <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div class="text-white">
+          <div class="text-5xl font-bold text-white mb-2">500+</div>
+          <div class="text-xl text-gray-300">Happy Customers</div>
+        </div>
+        <div class="text-white">
+          <div class="text-5xl font-bold text-white mb-2">5.0</div>
+          <div class="text-xl text-gray-300">Average Rating</div>
+        </div>
+        <div class="text-white">
+          <div class="text-5xl font-bold text-white mb-2">100%</div>
+          <div class="text-xl text-gray-300">Satisfaction Rate</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parallax Section -->
+  <section class="parallax-bg relative h-96 md:h-screen flex items-center justify-center">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 text-center text-white px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-3">Premium Car Care</h2>
+      <p class="text-base md:text-lg max-w-2xl mx-auto">From luxury sports cars to everyday vehicles, we deliver the same level of excellence and attention to detail.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold text-gray-900 text-center">Contact Us</h2>
+      <p class="mt-4 text-lg text-gray-500 text-center">Ready to give your vehicle the care it deserves?</p>
+      
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Contact Information -->
+        <div class="bg-gray-100 p-8 rounded-lg">
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h3>
+          
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <i class="fas fa-phone text-gray-600 mr-4"></i>
+              <div>
+                <strong class="text-gray-900">Phone</strong>
+                <p class="text-gray-600">(208) 800-9511</p>
+              </div>
+            </div>
+            
+            <div class="flex items-center">
+              <i class="fas fa-envelope text-gray-600 mr-4"></i>
+              <div>
+                <strong class="text-gray-900">Email</strong>
+                <p class="text-gray-600">harperbrown5556@gmail.com</p>
+              </div>
+            </div>
+            
+            <div class="flex items-center">
+              <i class="fas fa-map-marker-alt text-gray-600 mr-4"></i>
+              <div>
+                <strong class="text-gray-900">Service Area</strong>
+                <p class="text-gray-600">Meridian, Idaho and surrounding areas</p>
+              </div>
+            </div>
+            
+            <div class="flex items-center">
+              <i class="fas fa-clock text-gray-600 mr-4"></i>
+              <div>
+                <strong class="text-gray-900">Hours</strong>
+                <p class="text-gray-600">Monday - Saturday: 3:00 PM - 6:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <div class="bg-gray-100 p-8 rounded-lg">
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">Book Your Service</h3>
+          <form id="contactForm">
+                         <div class="space-y-4">
+               <input type="text" id="name" name="name" placeholder="Your Name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+               
+               <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+              
+              <label for="service" class="block text-gray-900 font-medium mb-2">Service Type</label>
+              <select id="service" name="service" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white">
+                <option value="" class="text-gray-500">Select Service</option>
+                <option value="interior" class="text-black">Interior</option>
+                <option value="exterior" class="text-black">Exterior</option>
+                <option value="both" class="text-black">Both</option>
+              </select>
+              
+              <textarea id="message" name="message" placeholder="Additional details or special requests" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+              
+              <button type="submit" class="w-full bg-black text-white py-3 px-6 rounded-lg font-bold hover:bg-gray-800 transition-colors">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-6">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <div class="text-sm">
+        &copy; 2024 Cloud 9 Detailing. All rights reserved.
+      </div>
+      <div>
+        <a href="#contact" class="text-gray-400 hover:text-white mx-2">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Enhanced Mobile Menu Toggle with Animation
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    let isMenuOpen = false;
+    
+    menuButton.addEventListener('click', function() {
+        isMenuOpen = !isMenuOpen;
+        
+        if (isMenuOpen) {
+            // Open menu
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => {
+                mobileMenu.style.maxHeight = '600px';
+            }, 10);
+            
+            // Animate hamburger to X
+            const spans = menuButton.querySelectorAll('span');
+            spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+            spans[1].style.opacity = '0';
+            spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+        } else {
+            // Close menu
+            mobileMenu.style.maxHeight = '0';
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300);
+            
+            // Animate X back to hamburger
+            const spans = menuButton.querySelectorAll('span');
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+        }
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', function() {
+            isMenuOpen = false;
+            mobileMenu.style.maxHeight = '0';
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300);
+            
+            // Reset hamburger icon
+            const spans = menuButton.querySelectorAll('span');
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+        });
+    });
+
+    // Contact Form Handling
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+                 // Get form data
+         const formData = new FormData(contactForm);
+         const name = formData.get('name');
+         const phone = formData.get('phone');
+         const service = formData.get('service');
+         const message = formData.get('message');
+         
+         // Basic validation
+         if (!name || !phone || !service) {
+             alert('Please fill in all required fields.');
+             return;
+         }
+        
+        // Show success message
+        alert('Thank you for your message! We will contact you soon.');
+        
+        // Reset form
+        contactForm.reset();
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Enhanced header scroll effect
+    window.addEventListener('scroll', function() {
+        const header = document.getElementById('main-header');
+        
+        if (window.scrollY > 50) {
+            header.classList.add('shadow-2xl');
+            header.classList.add('bg-opacity-95');
+        } else {
+            header.classList.remove('shadow-2xl');
+            header.classList.remove('bg-opacity-95');
+        }
+    });
+  </script>
+
+</body>
+</html>
